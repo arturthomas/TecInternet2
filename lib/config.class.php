@@ -4,7 +4,7 @@ class Config {
 
     protected static $settings = array();
 
-    public function get ($key) {
+    public static function get ($key) {
         return isset(self::$settings[$key]) ? self::$settings[$key] : null;
     }
 

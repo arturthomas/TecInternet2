@@ -7,7 +7,7 @@ function load ($class_name) {
 
     $lib_path = ROOT.DS.'lib'.DS.strtolower($class_name).'.class.php';
     $model_path = ROOT.DS.'models'.DS.strtolower($class_name).'.class.php';
-    $controllers_path = ROOT.DS.'controllers'.DS.str_replace('controller', '', strtolower($class_name)).'.controllers.php';
+    $controllers_path = ROOT.DS.'controllers'.DS.str_replace('controller', '', strtolower($class_name)).'.controller.php';
 
 
     if (file_exists($lib_path)) {
