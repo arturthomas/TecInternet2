@@ -15,10 +15,10 @@ class Controller {
     public function getParams() {
         return $this->params;
     }
-    
+
     public function __construct($data = array())
     {
         $this->data = $data;
-        $this->params = App::getRouter()->getParams();
+        $this->parasm = App::getRouter()->getParams();
     }
 }

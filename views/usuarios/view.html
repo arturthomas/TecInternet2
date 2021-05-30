@@ -1,0 +1,27 @@
+<div>
+    <span>Nome: <?=$data['usuario']['nome']?></span>
+    <br/>
+    <span>Nascimento: <?=$data['usuario']['data_nascimento']?></span>
+    <br/>
+    <span>Tipo: <?=$data['usuario']['tipo']?></span>
+    <br/>
+    <span>Documento: <?=$data['usuario']['cpf_cnpj']?></span>
+    <br/>
+</div>
+<hr>
+<div>
+    <?php foreach($data['cartoes'] as $cartao) { ?>
+        <span>Bandeira: <?=$cartao['bandeira']?></span>
+        <br/>
+        <span>Número: <?=$cartao['numero']?></span>
+        <br/>
+        <span>Limite: <?=$cartao['limite']?></span>
+        <br/>
+        <span>Validade: <?=$cartao['validade']?></span>
+        <br/>
+        <span>Ativo: <?=$cartao['ativo']?></span>
+        <br/>
+
+    <?php }?>
+    <br/>
+</div>
