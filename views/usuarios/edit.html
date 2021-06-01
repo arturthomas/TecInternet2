@@ -1,0 +1,20 @@
+<div>
+    <form action="" method="POST">
+        <input hidden=true type="text" id="nome" name="id" value="<?=$data['usuario']['id']?>">   
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<?=$data['usuario']['nome']?>"><br />
+
+        <label for="nome">Nascimento:</label>
+        <input type="text" id="nascimento" name="nascimento" value="<?=$data['usuario']['data_nascimento']?>"><br />
+
+        <label for="nome">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" value="<?=$data['usuario']['tipo']?>"><br />
+
+        <label for="nome">Documento:</label>
+        <input type="text" id="documento" name="documento" value="<?=$data['usuario']['cpf_cnpj']?>"><br />
+
+        <input type="submit" value="Salvar">
+    </form>
+
+</div>

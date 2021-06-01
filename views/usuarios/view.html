@@ -7,6 +7,10 @@
     <br/>
     <span>Documento: <?=$data['usuario']['cpf_cnpj']?></span>
     <br/>
+
+    <form action="/nullbank/usuarios/edit/<?=$data['usuario']['id']?>">
+        <input type="submit" value="Editar" />
+    </form>
 </div>
 <hr>
 <div>
