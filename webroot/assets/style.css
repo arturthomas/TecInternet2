@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
+body {
+    background-color: #8a05be;
+    color: #fff;
+    margin: 1%;
+}
+
+
+.title {
+    font-family: 'Plaster', cursive;
+    font-size: 2.8rem;
+}
+
+.nav-header {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.nav-header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-header a:hover {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8a05be;
+    padding: 1%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+}
+
+.text-container {
+    margin: 10%;
+    font-size: 1.8rem;
+}
+
+.list-usuarios a {
+    text-decoration: none;
+    color: #ded5e2;
+    font-size: 1.2rem;
+}
+
+.list-usuarios a:hover {
+    text-decoration: none;
+    color: #ded5e2;
+    font-size: 1.2rem;
+    padding: 1%;
+}
+
+.container-card {
+    display:flex;
+    flex-direction: row;
+    margin: 2%;
+}

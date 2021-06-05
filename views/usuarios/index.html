@@ -1,12 +1,12 @@
 <!-- <?php var_dump($data['usuarios']);?> -->
 <?php foreach($data['usuarios'] as $usuario) { ?>
 
-    <div>
+    <div class="list-usuarios">
         <a href="view/<?=$usuario['id']?>"><?=$usuario['nome'] ?></a>
     </div>
 
 <?php } ?>
 
-<form action="/nullbank/usuarios/add">
-    <input type="submit" value="Criar" />
+<form action="/nullbank/usuarios/add" style="margin-top: 2%;">
+    <input type="submit" value="Criar" class="btn btn-light" />
 </form>

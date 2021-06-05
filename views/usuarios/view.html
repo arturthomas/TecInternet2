@@ -9,22 +9,56 @@
     <br/>
 
     <form action="/nullbank/usuarios/edit/<?=$data['usuario']['id']?>">
-        <input type="submit" value="Editar" />
+        <input type="submit" value="Editar" class="btn btn-light"/>
     </form>
 </div>
 <hr>
-<div>
-    <?php foreach($data['cartoes'] as $cartao) { ?>
-        <span>Bandeira: <?=$cartao['bandeira']?></span>
-        <br/>
-        <span>Número: <?=$cartao['numero']?></span>
-        <br/>
-        <span>Limite: <?=$cartao['limite']?></span>
-        <br/>
-        <span>Validade: <?=$cartao['validade']?></span>
-        <br/>
-        <span>Ativo: <?=$cartao['ativo']?></span>
-        <br/>
+<div class="container-card">
+    
+    <?php foreach($data['cartoes'] as $cartao) { 
+        $linkBandeira = $cartao['bandeira'] == 'visa' ? 'https://icons.iconarchive.com/icons/designbolts/credit-card-payment/48/Visa-icon.png' :  'https://icons.iconarchive.com/icons/designbolts/credit-card-payment/48/Master-Card-Blue-icon.png';
+        
+        ?>
+
+        <div class="card">
+            <div class="card__front card__part">
+                <img class="card__front-square card__square" src=<?=$linkBandeira?>>
+                    
+                <p class="card_numer">
+                    <?=$cartao['numero']?>
+                </p>
+                <div class="card__space-75">
+                    <span class="card__label">Nome</span>
+                    <p class="card__info">
+                        <?=$data['usuario']['nome']?>
+                    </p>
+                </div>
+                <div class="card__space-25">
+                    <span class="card__label">Validade</span>
+                    <p class="card__info">
+                        <span>
+                            <?=$cartao['validade']?>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="card__back card__part">
+                <div class="card__black-line"></div>
+                <div class="card__back-content">
+                    <div class="card__secret">
+                        <p class="card__secret--last">420</p>
+                    </div>
+                    <div class="card__space-25" style="margin-top: 1%;">
+                        <span class="card__label">Limite</span>
+                        <p class="card__info">
+                            <span>R$
+                                <?=$cartao['limite']?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
 
     <?php }?>
     <br/>
