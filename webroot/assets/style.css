@@ -82,3 +82,7 @@ body {
     flex-direction: row;
     margin: 2%;
 }
+
+.form-container {
+    padding: 1% 8%;
+}

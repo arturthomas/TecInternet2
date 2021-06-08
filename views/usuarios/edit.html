@@ -1,20 +1,49 @@
+<!-- https://getbootstrap.com/docs/5.0/forms/validation/ -->
 <div>
-    <form action="" method="POST">
-        <input hidden=true type="text" id="nome" name="id" value="<?=$data['usuario']['id']?>">   
+    <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+    <div class="row">
+            <input hidden=true type="text" id="id" name="id" value="<?= $data['usuario']['id'] ?>">
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" value="<?=$data['usuario']['nome']?>"><br />
+            <div class="col-4">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="<?= $data['usuario']['nome'] ?>" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    O nome não pode ser vazio.
+                </div>
+            </div>
 
-        <label for="nome">Nascimento:</label>
-        <input type="text" id="nascimento" name="nascimento" value="<?=$data['usuario']['data_nascimento']?>"><br />
+            <div class="col-4">
+                <label for="nome" class="form-label">Documento:</label>
+                <input type="text" class="form-control" id="documento" name="documento" value="<?= $data['usuario']['cpf_cnpj'] ?>" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    O documento (CPF ou CNPJ) não pode ser vazio.
+                </div>
+            </div>
 
-        <label for="nome">Tipo:</label>
-        <input type="text" id="tipo" name="tipo" value="<?=$data['usuario']['tipo']?>"><br />
+            <div class="col-2">
+                <label for="nome" class="form-label">Tipo:</label>
+                <select class="form-select" id="tipo" name="tipo" required>
+                    <option selected disabled value="">Tipo</option>
 
-        <label for="nome">Documento:</label>
-        <input type="text" id="documento" name="documento" value="<?=$data['usuario']['cpf_cnpj']?>"><br />
+                    <option value="PF" <?= $data['usuario']['tipo'] == 'PF' ? 'selected' : '' ?>>Pessoa Física</option>
+                    <option value="PJ" <?= $data['usuario']['tipo'] == 'PJ' ? 'selected' : '' ?>>Pessoa Jurídica</option>
+                </select>
+            </div>
 
-        <input type="submit" value="Salvar">
+            <div class="col-4">
+                <label for="nascimento" class="form-label">Nascimento:</label>
+                <input type="text" class="form-control" id="nascimento" name="nascimento" value="<?= $data['usuario']['data_nascimento'] ?>">
+            </div>
+
+        </div>
+        
+        <div>
+            <input id="btnCleanForm" value="Limpar" class="btn btn-danger">
+            <input type="submit" value="Salvar" class="btn btn-light">
+        </div>
+
+
     </form>
-
+    <script src="https://unpkg.com/imask"></script>
+    <script src="/nullbank/webroot/assets/usuarios/edit.js"></script>
 </div>

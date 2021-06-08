@@ -40,6 +40,9 @@ class UsuariosController extends Controller {
             $id = $_POST['id'];
             if (isset($id)) {
                 $data = $_POST;
+                $formatedDate = str_replace("/","-", $data['nascimento']);
+                $data['nascimento'] = date('Y-m-d', strtotime($formatedDate));
+
                 $this->model->updateById($id, $data);
             }
         }
