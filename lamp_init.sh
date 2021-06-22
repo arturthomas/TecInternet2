@@ -5,7 +5,7 @@ rm -rf *
 
 # clone github repo
 #------------------
-git clone -b loft https://github.com/lesimoes/TecInternet2 .
+git clone -b parte06 https://github.com/lesimoes/TecInternet2 .
 
 # set write permissons on the settings file
 #-----------------------------------
