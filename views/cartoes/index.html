@@ -1,0 +1,8 @@
+<!-- <?php var_dump($data['usuarios']);?> -->
+<?php foreach($data['cartoes'] as $cartao) { ?>
+
+    <div>
+        <a href="view/<?=$cartao['id']?>"><?=$cartao['bandeira'] ?></a>
+    </div>
+
+<?php } ?>
