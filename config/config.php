@@ -13,5 +13,5 @@ Config::set('default_action', 'index');
 // Dados de acesso ao banco de dados
 Config::set('db.host', 'localhost');
 Config::set('db.user', 'root');
-Config::set('db.password', '');
+Config::set('db.password', 'SENHA_AQUI');
 Config::set('db.db_name', 'nullbank');
